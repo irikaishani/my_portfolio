@@ -15,7 +15,7 @@ HTML, CSS, JavaScript,Canvas, Boxicons
 
 ## 🌐 Live
 
-[View Portfolio](https://your-portfolio-link.com)
+[View Portfolio](https://irikaishani.github.io/my_portfolio/)
 
 ---
 
