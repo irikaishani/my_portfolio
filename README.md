@@ -5,9 +5,10 @@ This is my personal portfolio website showcasing my profile, skills, and project
 ## 🚀 Features
 
 - Modern,eye-catching and responsive design.
-- About Me, Projects, and Contact sections
+- About Me, Projects,Services and Contact sections
 - Downloadable resume
 - Social media links
+- Animated Background
 
 ## 🛠️ Tech Stack
 
