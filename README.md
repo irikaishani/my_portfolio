@@ -4,7 +4,7 @@ This is my personal portfolio website showcasing my profile, skills, and project
 
 ## 🚀 Features
 
-- Modern and eye-catching design
+- Modern,eye-catching and responsive design.
 - About Me, Projects, and Contact sections
 - Downloadable resume
 - Social media links
