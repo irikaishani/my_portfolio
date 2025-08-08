@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Irika Portfolio</title>
+
+  <!-- ✅ Local Tailwind output.css -->
+  <link rel="stylesheet" href="output.css" />
+
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <style>
+    :root {
+      --bg-color: rgb(24, 28, 20);
+      --second-bg-color:  rgb(90 92 78 / 26%);
+      --text-color: rgb(236, 223, 204);
+      --main-color:  rgb(132 143 128);
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+
+    #bgCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: var(--bg-color);
+    }
+  </style>
+</head>
+
+<body >
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Header/Navbar -->
+  <!-- ✅ Navbar -->
+  <header class="fixed top-0 left-0 w-full px-8 py-8 flex justify-between items-center bg-[var(--second-bg-color)] backdrop-blur-md z-50">
+    <a href="index.html" class="text-4xl bottom-0.5 font-extrabold text-[var(--text-color)] transition-transform duration-300 hover:scale-110 mt-2 md:mt-4 ml-2 md:ml-6">
+      Irika <span class="bg-clip-text text-transparent bg-gradient-to-r from-[rgba(132,143,128,0.46)] to-[var(--text-color)]">Ishani</span>
+    </a>
+
+    <div class="md:hidden">
+      <button id="menu-btn" class="text-3xl text-[var(--main-color)] focus:outline-none">
+        <i class='bx bx-menu'></i>
+      </button>
+    </div>
+
+<nav id="nav-menu" class="hidden md:flex items-center gap-10">
+<a href="index.html" class="text-xl font-bold text-[var(--main-color)] border-b-2 border-[var(--main-color)]">Home</a>
+<a href="about.html" class="text-xl font-bold text-[var(--text-color)] hover:text-[var(--main-color)] border-b-2 border-transparent hover:border-[var(--main-color)]">About</a>
+<a href="projects.html" class="text-xl font-bold text-[var(--text-color)] hover:text-[var(--main-color)] border-b-2 border-transparent hover:border-[var(--main-color)]">Projects</a>
+<a href="services.html" class="text-xl font-bold text-[var(--text-color)] hover:text-[var(--main-color)] border-b-2 border-transparent hover:border-[var(--main-color)]">Services</a>
+
+</nav>
+
+    <a href="contact.html" class="hidden md:inline-block bg-gradient-to-r from-[rgba(132,143,128,0.46)] to-[var(--text-color)] text-white text-lg px-6 py-2 rounded-full transition-transform duration-300 hover:scale-110">Contact Me</a>
+  </header>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden flex-col space-y-6 px-8 py-8 bg-[var(--second-bg-color)] backdrop-blur-md md:hidden absolute top-20 left-5  w-full z-40">
+    <a href="index.html" class="block text-xl text-[var(--text-color)]  hover:text-[var(--main-color)] transition">Home</a>
+    <a href="about.html" class="block text-xl text-[var(--text-color)]  hover:text-[var(--main-color)] transition">About</a>
+    <a href="projects.html" class="block text-xl text-[var(--text-color)]  hover:text-[var(--main-color)] transition">Projects</a>
+    <a href="services.html" class="block text-xl text-[var(--text-color)]  hover:text-[var(--main-color)] transition">Services</a>
+    <a href="contact.html" class="block text-xl bg-gradient-to-r from-[rgba(132,143,128,0.46)] to-[var(--text-color)] text-white px-5 py-2 rounded-full transition hover:scale-105">Contact Me</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen pt-40 px-6 md:px-32 flex flex-col md:flex-col-reverse lg:flex-row items-center justify-center gap-16">
+    <div class="home-img">
+      <img src="images/irika.jpg" alt="Irika Ishani" class="w-72 md:w-[30vw] rounded-[53%] shadow-[0_0_25px_var(--main-color)] hover:shadow-[0_0_100px_var(--main-color)] transition-transform duration-500 hover:scale-110 mx-auto"/>
+    </div>
+
+    <div class="flex flex-col items-end text-right max-w-xl">
+      <h1 class="text-6xl md:text-7xl font-bold text-[var(--text-color)] transition-transform duration-300 hover:scale-110">Hi, It's <span class="bg-clip-text text-transparent bg-gradient-to-r from-[rgba(132,143,128,0.46)] to-[var(--text-color)]">Irika</span></h1>
+      <h3 class="text-3xl md:text-3xl font-semibold text-[var(--main-color)] my-4">I'm a <span>Data Analyst & Data Science Enthusiast</span></h3>
+      <p class="text-lg md:text-xl font-normal text-[rgba(236,223,204,0.9)]">Data analyst skilled in uncovering actionable insights and passionate about advancing into data science to drive intelligent, data-driven decisions.</p>
+
+      <!-- Social Icons -->
+      <div class="flex gap-6 mt-6">
+        <a href="https://www.linkedin.com/in/irika-ishani-828267307/" target="_blank"
+           class="w-14 h-14 flex items-center justify-center text-3xl border-2 border-[var(--main-color)] rounded-full text-[var(--text-color)] transition duration-300 hover:bg-[var(--main-color)] hover:text-[var(--bg-color)] hover:scale-110 hover:-translate-y-1 shadow-[0_0_15px_var(--main-color)]">
+          <i class='bx bxl-linkedin-square'></i>
+        </a>
+
+        <a href="https://github.com/irikaishani" target="_blank"
+           class="w-14 h-14 flex items-center justify-center text-3xl border-2 border-[var(--main-color)] rounded-full text-[var(--text-color)] transition duration-300 hover:bg-[var(--main-color)] hover:text-[var(--bg-color)] hover:scale-110 hover:-translate-y-1 shadow-[0_0_15px_var(--main-color)]">
+          <i class='bx bxl-github'></i>
+        </a>
+
+        <a href="mailto:ishaniirika5@gmail.com"
+           class="w-14 h-14 flex items-center justify-center text-3xl border-2 border-[var(--main-color)] rounded-full text-[var(--text-color)] transition duration-300 hover:bg-[var(--main-color)] hover:text-[var(--bg-color)] hover:scale-110 hover:-translate-y-1 shadow-[0_0_15px_var(--main-color)]">
+          <i class='bx bxl-gmail'></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Button -->
+  <a href="irika_resume.pdf" download class="fixed bottom-6 right-6 bg-[#292F23] text-[var(--text-color)] px-5 py-3 text-lg rounded-lg shadow-md hover:bg-[rgb(104,116,92)] hover:text-black z-50 transition-transform duration-300 hover:scale-110">
+    Download Resume 📄
+  </a>
+
+  <!-- Canvas Animation Script -->
+  <script>
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+
+    window.addEventListener('resize', () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+      initBlobs();
+    });
+
+    class Blob {
+      constructor(centerX, centerY, radius, numPoints, speedMultiplier) {
+        this.center = { x: centerX, y: centerY };
+        this.radius = radius;
+        this.numPoints = numPoints;
+        this.speedMultiplier = speedMultiplier;
+        this.points = [];
+        for (let i = 0; i < numPoints; i++) {
+          let angle = (Math.PI * 2 / numPoints) * i;
+          this.points.push({
+            angle: angle,
+            rad: radius + Math.random() * 10,
+            speed: (Math.random() - 0.7) * 0.01 * speedMultiplier,
+          });
+        }
+      }
+
+      update() {
+        ctx.beginPath();
+        for (let i = 0; i < this.points.length; i++) {
+          let p = this.points[i];
+          p.angle += p.speed;
+          let x = this.center.x + Math.cos(p.angle) * p.rad;
+          let y = this.center.y + Math.sin(p.angle) * p.rad;
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.fillStyle = 'rgba(132, 143, 128, 0.15)';
+        ctx.fill();
+      }
+    }
+
+    let blobs = [];
+    function initBlobs() {
+      blobs = [];
+      blobs.push(new Blob(width * 0.2, height * 0.25, 180, 10, 0.5));
+      blobs.push(new Blob(width * 0.8, height * 0.3, 150, 10, 0.6));
+      blobs.push(new Blob(width * 0.3, height * 0.7, 130, 9, 0.7));
+      blobs.push(new Blob(width * 0.7, height * 0.75, 120, 9, 0.8));
+      blobs.push(new Blob(width * 0.1, height * 0.9, 70, 8, 1.0));
+      blobs.push(new Blob(width * 0.9, height * 0.85, 60, 7, 1.0));
+      blobs.push(new Blob(width * 0.5, height * 0.5, 80, 7, 1.0));
+    }
+    initBlobs();
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+      blobs.forEach(blob => blob.update());
+      requestAnimationFrame(animate);
+    }
+    animate();
+
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

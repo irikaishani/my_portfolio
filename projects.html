@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Irika</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+  <style>
+    :root {
+      --bg-color: rgb(24, 28, 20);
+      --second-bg-color: rgb(90 92 78 / 26%);
+      --text-color: rgb(236, 223, 204);
+      --main-color: rgb(132 143 128);
+    }
+    body { background: var(--bg-color); color: var(--text-color); }
+    #backgroundCanvas {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0; pointer-events: none;
+    }
+  </style>
+</head>
+<body class="font-sans">
+<canvas id="backgroundCanvas"></canvas>
+
+<!-- ✅ Navbar -->
+<header class="fixed top-0 left-0 w-full px-8 py-8 flex justify-between items-center bg-[var(--second-bg-color)] backdrop-blur-md z-50">
+  <a href="index.html" class="text-4xl bottom-0.5 font-extrabold text-[var(--text-color)] transition-transform duration-300 hover:scale-110 mt-2 md:mt-4 ml-2 md:ml-6">
+    Irika <span class="bg-clip-text text-transparent bg-gradient-to-r from-[rgba(132,143,128,0.46)] to-[var(--text-color)]">Ishani</span>
+  </a>
+
+  <!-- ✅ Mobile Menu Button -->
+  <div class="md:hidden">
+    <button id="menu-btn" class="text-3xl text-[var(--main-color)] focus:outline-none">
+      <i class='bx bx-menu'></i>
+    </button>
+  </div>
+
+  <!-- ✅ Desktop Menu -->
+  <nav id="nav-menu" class="hidden md:flex items-center gap-10">
+    <a href="index.html" class="text-xl font-bold text-[var(--text-color)] hover:text-[var(--main-color)] border-b-2 border-transparent hover:border-[var(--main-color)]">Home</a>
+    <a href="about.html" class="text-xl font-bold text-[var(--text-color)] hover:text-[var(--main-color)] border-b-2 border-transparent hover:border-[var(--main-color)]">About</a>
+    <a href="projects.html" class="text-xl font-bold text-[var(--main-color)] border-b-2 border-[var(--main-color)]">Projects</a>
+    <a href="services.html" class="text-xl font-bold text-[var(--text-color)] hover:text-[var(--main-color)] border-b-2 border-transparent hover:border-[var(--main-color)]">Services</a>
+  </nav>
+
+  <a href="contact.html" class="hidden md:inline-block bg-gradient-to-r from-[rgba(132,143,128,0.46)] to-[var(--text-color)] text-white text-lg px-6 py-2 rounded-full transition-transform duration-300 hover:scale-110">Contact Me</a>
+</header>
+
+<!-- ✅ Mobile Menu -->
+<div id="mobile-menu" class="hidden flex-col space-y-6 px-8 py-8 bg-[var(--second-bg-color)] backdrop-blur-md md:hidden absolute top-20 left-5 w-full z-40">
+  <a href="index.html" class="block text-xl text-[var(--text-color)] hover:text-[var(--main-color)] transition">Home</a>
+  <a href="about.html" class="block text-xl text-[var(--text-color)] hover:text-[var(--main-color)] transition">About</a>
+  <a href="projects.html" class="block text-xl text-[var(--main-color)] font-bold underline underline-offset-4">Projects</a>
+  <a href="services.html" class="block text-xl text-[var(--text-color)] hover:text-[var(--main-color)] transition">Services</a>
+  <a href="contact.html" class="block text-xl bg-gradient-to-r from-[rgba(132,143,128,0.46)] to-[var(--text-color)] text-white px-5 py-2 rounded-full transition hover:scale-105">Contact Me</a>
+</div>
+
+<!-- ✅ Projects Section (unchanged) -->
+<!-- KEEPING YOUR FULL ORIGINAL CONTENT (AS IS) -->
+<!-- 👇 Paste the full <section class="pt-40 pb-20... </script> part here from your original code exactly -->
+  <!-- Projects Section -->
+<section class="pt-40 pb-20 px-4 sm:px-10 md:px-20 lg:px-32 min-h-screen relative z-10">
+  <h2 class="text-center text-5xl sm:text-6xl font-bold mb-12">
+    <span class="bg-clip-text text-transparent bg-gradient-to-r from-[var(--main-color)] to-[var(--text-color)]">Projects</span>
+  </h2>
+
+
+  <div class="flex flex-col gap-20">
+    <!-- Project 1 -->
+<!-- Project 1 -->
+<div id="firstproject" class="flex flex-col items-center text-center bg-[var(--second-bg-color)] rounded-3xl p-8 md:p-10 shadow-[0_0_20px_var(--main-color)] hover:shadow-[0_0_40px_var(--main-color)] transition-all duration-700 ease-in-out
+ transform hover:scale-105">
+  <img src="images/option analyzer.png" class="w-full max-w-xl rounded-2xl mb-8" alt="Project 1">
+  <h3 class="text-3xl md:text-4xl font-extrabold text-[var(--main-color)] mb-6">Project 1</h3>
+  <p class="text-base md:text-lg leading-relaxed mb-6 max-w-4xl">Built an advanced Streamlit-based web application to streamline Indian stock option analysis by leveraging real-time data and AI-driven insights. The platform enables traders and analysts to evaluate option strategies through critical metrics such as Option Greeks (Delta, Gamma, Theta, Vega, Rho), strike prices, open interest, and current prices. It integrates the Upstox API for live market data and utilizes the Groq API to generate intelligent buy/sell recommendations, profit projections, and risk-reward assessments. The application features a multipage interface for intuitive navigation and a modular architecture to support scalable API integration and future enhancements.</p>
+  <a href="https://github.com/irikaishani/Indian_Stock_Option_Analyzer" class="px-6 py-3 text-[var(--bg-color)] bg-[var(--main-color)] rounded-full font-semibold hover:bg-[var(--text-color)] hover:text-[var(--bg-color)] transition">Review Project</a>
+</div>
+
+
+    <!-- Project 2 -->
+    <div id="secondproject" class="flex flex-col items-center text-center bg-[var(--second-bg-color)] rounded-3xl p-8 md:p-10 shadow-[0_0_20px_var(--main-color)] hover:shadow-[0_0_40px_var(--main-color)] transition-all duration-700 ease-in-out
+ transform hover:scale-105">
+      <img src="images/stock orderhub.png" class="w-full max-w-xl rounded-2xl mb-8" alt="Project 2">
+      <h3 class="text-3xl md:text-4xl font-extrabold text-[var(--main-color)] mb-6">Project 2</h3>
+      <p class="text-base md:text-lg leading-relaxed mb-6 max-w-4xl">Developed a full-fledged Streamlit-based web application that enables users to place live stock orders on the NSE using the Upstox v2 API. The app features a clean multi-page layout where users can select equity stocks, choose between Market and Limit orders, specify quantity, and confirm BUY or SELL transactions. Orders are placed using the CNC (Cash and Carry) product type and are automatically set as AMO (After Market Orders) if the market is closed. The app includes secure access token handling through environment variables and provides real-time order previews before submission. Designed for simplicity, automation, and trading accuracy, this project demonstrates API integration, frontend logic, and deployment readiness for real-world stock trading workflows.</p>
+      <a href="https://github.com/irikaishani/Indian_Stock_OrderHub" class="px-6 py-3 text-[var(--bg-color)] bg-[var(--main-color)] rounded-full font-semibold hover:bg-[var(--text-color)] hover:text-[var(--bg-color)] transition">Review Project</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div id="thirdproject" class="flex flex-col items-center text-center bg-[var(--second-bg-color)] rounded-3xl p-8 md:p-10 shadow-[0_0_20px_var(--main-color)] hover:shadow-[0_0_40px_var(--main-color)] transition-all duration-700 ease-in-out
+ transform hover:scale-105">
+      <img src="images/market indices.png" class="w-full max-w-xl rounded-2xl mb-8" alt="Project 3">
+      <h3 class="text-3xl md:text-4xl font-extrabold text-[var(--main-color)] mb-6">Project 3</h3>
+      <p class="text-base md:text-lg leading-relaxed mb-6 max-w-4xl">Built an interactive real-time dashboard using Streamlit that fetches live Indian stock market sector data via the Moneycontrol API. The app offers intuitive visual insights into market movements across multiple indices through dynamic charts and summaries.The dashboard features real-time data integration from Moneycontrol’s internal API, offering dynamic visual insights through Plotly-based heatmaps, bar charts, and pie charts. It includes summary cards, top gainers/losers highlights, a downloadable CSV option, and interactive filters with a dark/light theme switch.</p>
+      <h4 class="mb-4">Please scroll down to see further projects</h4>
+      <a href="https://github.com/irikaishani/Indian_Market_Indices_Dashboard" class="px-6 py-3 text-[var(--bg-color)] bg-[var(--main-color)] rounded-full font-semibold hover:bg-[var(--text-color)] hover:text-[var(--bg-color)] transition">Review Project</a>
+    </div>
+  </div>
+
+  <div class="text-center mt-20">
+    <a href="https://github.com/irikaishani" target="_blank" class="inline-block text-lg font-semibold bg-gradient-to-r from-[var(--main-color)] to-[var(--text-color)] text-[var(--bg-color)] px-6 py-3 rounded-full border-2 border-[var(--main-color)] shadow-lg hover:bg-[var(--bg-color)] hover:text-[#323432] hover:border-[#323432] transition">View More Projects on GitHub</a>
+  </div>
+</section>
+
+
+
+<!-- Scroll Button -->
+<a class="scroll-down-btn fixed bottom-8 right-8 bg-white/10 border-2 border-[var(--main-color)] rounded-full w-14 h-14 flex items-center justify-center text-[var(--main-color)] text-3xl transition hover:bg-[var(--main-color)] hover:text-[var(--bg-color)] hover:scale-110 z-50"><i class='bx bx-down-arrow-alt'></i></a>
+
+<!-- ✅ Scroll Logic -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var scrollBtn = document.querySelector('.scroll-down-btn');
+  var target1 = document.getElementById('firstproject');
+  var target2 = document.getElementById('secondproject');
+  var target3 = document.getElementById('thirdproject');
+  let clickCount = 0;
+  if (scrollBtn && target1 && target2 && target3) {
+    scrollBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      clickCount++;
+      let target;
+      if (clickCount % 3 === 1) target = target2;
+      else if (clickCount % 3 === 2) target = target3;
+      else target = target1;
+      if (target) {
+        var offset = -100;
+        var pos = target.getBoundingClientRect().top + window.pageYOffset + offset;
+        window.scrollTo({ top: pos, behavior: 'smooth' });
+      }
+    });
+  }
+});
+</script>
+
+<!-- ✅ Background Animation -->
+<script>
+const canvas = document.getElementById('backgroundCanvas');
+const ctx = canvas.getContext('2d');
+let width, height, particles = [];
+function resize() {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  canvas.width = width;
+  canvas.height = height;
+}
+window.addEventListener('resize', resize);
+resize();
+function createParticles() {
+  particles = [];
+  for (let i = 0; i < 60; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5
+    });
+  }
+}
+function draw() {
+  ctx.clearRect(0, 0, width, height);
+  for (let i = 0; i < particles.length; i++) {
+    let p = particles[i];
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(132, 143, 128, 0.6)";
+    ctx.fill();
+    for (let j = i + 1; j < particles.length; j++) {
+      let p2 = particles[j];
+      let dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+      if (dist < 120) {
+        ctx.strokeStyle = "rgba(132, 143, 128, 0.2)";
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.stroke();
+      }
+    }
+    p.x += p.vx;
+    p.y += p.vy;
+    if (p.x < 0 || p.x > width) p.vx *= -1;
+    if (p.y < 0 || p.y > height) p.vy *= -1;
+  }
+  requestAnimationFrame(draw);
+}
+createParticles();
+draw();
+</script>
+
+<!-- ✅ ✅ FIXED: Mobile Menu Toggle Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+});
+</script>
+
+</body>
+</html>
